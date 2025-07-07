@@ -1,0 +1,141 @@
+body {
+  background-color: #111111;
+  font-family: 'Segoe UI', sans-serif;
+  color: #f8f8f8;
+  margin: 0;
+  padding: 0;
+}
+
+.flyer-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #1a1a1a;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.header h1 {
+  color: #ffd700;
+  font-size: 2.5rem;
+  margin-bottom: 0.3rem;
+}
+
+.header p {
+  color: #dddddd;
+  margin: 0.25rem 0;
+}
+
+.photo-frame {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.photo {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
+}
+
+.photo-caption {
+  margin-top: 0.5rem;
+  color: #aaaaaa;
+  font-style: italic;
+}
+
+.content h2 {
+  color: #ffd700;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.service {
+  margin-bottom: 1.5rem;
+}
+
+.service h3 {
+  color: #fdd835;
+  font-size: 1.3rem;
+  margin-bottom: 0.3rem;
+}
+
+.service p {
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+.info {
+  background-color: #222;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  color: #ffd700;
+  margin-top: 2rem;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.quote {
+  margin-top: 2rem;
+  font-style: italic;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #f5f5f5;
+  border-top: 1px solid #444;
+  padding-top: 1rem;
+}
+
+.cta-button {
+  background-color: #000000;
+  color: #ffd700;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  text-decoration: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(255, 215, 0, 0.3);
+  transition: all 0.3s ease;
+  display: inline-block;
+  margin-top: 2rem;
+}
+
+.cta-button:hover {
+  background-color: #222;
+  color: #fff8dc;
+  transform: scale(1.03);
+}
+
+@media (max-width: 600px) {
+  .flyer-container {
+    padding: 1rem;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .content h2 {
+    font-size: 1.5rem;
+  }
+
+  .service h3 {
+    font-size: 1.1rem;
+  }
+
+  .cta-button {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+  }
+
+  .info {
+    font-size: 0.95rem;
+  }
+
+  .quote {
+    font-size: 1rem;
+  }
+}
