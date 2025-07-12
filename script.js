@@ -17,23 +17,38 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // JotForm Integration
+    // JotForm Integration with enhanced debugging
     const jotformLink = document.getElementById('jotform-link');
     if (jotformLink) {
+        console.log('JotForm button found, setting up click handler...');
+        
         jotformLink.addEventListener('click', function(e) {
             e.preventDefault();
-            // Replace 'YOUR_JOTFORM_ID' with your actual JotForm form ID
-            // Example: https://form.jotform.com/123456789
-            const jotformUrl = 'https://form.jotform.com/251873720824056';
+            console.log('JotForm button clicked!');
             
-            // Option 1: Open in new tab
-            if (!jotformUrl.includes('https://form.jotform.com/251873720824056')) {
-                window.open(jotformUrl, '_blank');
-            } else {
-                // Show instructions if JotForm not set up yet
-                alert('JotForm integration ready! Please replace YOUR_JOTFORM_ID in script.js with your actual JotForm form ID.');
+            // Your Sacred Hands JotForm booking form
+            const jotformUrl = 'https://form.jotform.com/251873720824056';
+            console.log('Opening JotForm:', jotformUrl);
+            
+            // Try multiple methods to ensure it opens
+            try {
+                // Method 1: Open in new tab
+                const newWindow = window.open(jotformUrl, '_blank');
+                
+                // Check if popup was blocked
+                if (!newWindow || newWindow.closed || typeof newWindow.closed == 'undefined') {
+                    console.log('Popup blocked, trying direct navigation...');
+                    // Method 2: Direct navigation as fallback
+                    window.location.href = jotformUrl;
+                }
+            } catch (error) {
+                console.error('Error opening JotForm:', error);
+                // Method 3: Last resort - direct navigation
+                window.location.href = jotformUrl;
             }
         });
+    } else {
+        console.error('JotForm button not found! Check HTML for id="jotform-link"');
     }
 
     // Quick contact form submission
