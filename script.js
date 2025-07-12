@@ -24,10 +24,10 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             // Replace 'YOUR_JOTFORM_ID' with your actual JotForm form ID
             // Example: https://form.jotform.com/123456789
-            const jotformUrl = 'https://form.jotform.com/YOUR_JOTFORM_ID';
+            const jotformUrl = 'https://form.jotform.com/251873720824056';
             
             // Option 1: Open in new tab
-            if (!jotformUrl.includes('YOUR_JOTFORM_ID')) {
+            if (!jotformUrl.includes('https://form.jotform.com/251873720824056')) {
                 window.open(jotformUrl, '_blank');
             } else {
                 // Show instructions if JotForm not set up yet
